@@ -1,0 +1,11 @@
+# Copie para ~/.config/certisign-nuvem/config.toml e preencha o seu e-mail de login.
+# NENHUM segredo aqui: a senha e o PIN ficam no chaveiro do sistema
+# (certisign-nuvemd --guardar-senha / --guardar-pin). O resto é automático: o dispositivo
+# se registra no 1º uso e o certificado + número de série vêm da nuvem (carteira).
+
+remoteid_url = "remoteidcertisign.com.br"   # host da nuvem Certisign, sem https://
+email = "voce@exemplo.com"                   # e-mail de login da sua conta Certisign
+
+# Opcionais (têm padrão sensato; normalmente não precisa mexer):
+# url_acesso = ""                            # contexto de login (vazio funciona)
+# nome_aplicacao_desktop = "certisign-nuvem (Linux)"

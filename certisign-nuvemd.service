@@ -1,0 +1,15 @@
+[Unit]
+Description=Daemon do e-CPF em nuvem (Certisign) no Linux
+Documentation=file:%h/Work/dev/cert-linux/nuvem/LEIAME.md
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/certisign-nuvemd
+Restart=on-failure
+RestartSec=3
+# Sessão só em memória; sem dump em disco.
+Environment=RUST_LOG=info
+
+[Install]
+WantedBy=default.target

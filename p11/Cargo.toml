@@ -1,0 +1,20 @@
+[package]
+name = "certisign-p11"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+name = "certisign_p11"
+crate-type = ["cdylib"]
+
+[dependencies]
+certisign-nuvem-core = { path = "../core" }
+native-pkcs11 = { version = "0.2.27", features = ["custom-function-list"] }
+native-pkcs11-traits = "0.2.27"
+serde_json.workspace = true
+base64 = "0.22"
+sha2 = "0.10"
+sha1 = "0.10"
+x509-cert = "0.2"
+der = "0.7"
