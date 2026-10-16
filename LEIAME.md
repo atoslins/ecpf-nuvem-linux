@@ -23,27 +23,29 @@ Chrome / Serpro / PJeOffice ──PKCS#11──> libcertisign_p11.so ──socke
 
 ## Instalar
 
-Precisa de: Rust (cargo), `nss` (certutil/pk12util/modutil) e `zenity` (ou `pinentry-gnome3`).
+Instalador interativo (banner, checagem de dependências, perguntas, serviço) — faz tudo:
+compila, instala, registra no p11-kit/Chrome/Serpro, pergunta o e-mail, guarda senha/PIN no
+chaveiro, registra o dispositivo e sobe o serviço.
+
+**Direto do terminal (one-liner):**
 
 ```bash
-./instalar.sh     # compila (release), instala binário + módulo, registra no p11-kit, Chrome e Serpro
+curl -fsSL -H "Authorization: Bearer $(gh auth token)" -H "Accept: application/vnd.github.raw" \
+  https://api.github.com/repos/atoslins/ecpf-nuvem-linux/contents/install.sh | bash
 ```
 
-Depois, uma vez, configure a conta:
+(precisa de `gh auth login` feito, já que o repo é privado.)
+
+**Ou a partir de um clone:**
 
 ```bash
-mkdir -p ~/.config/certisign-nuvem
-cp config.exemplo.toml ~/.config/certisign-nuvem/config.toml
-$EDITOR ~/.config/certisign-nuvem/config.toml      # ponha seu e-mail de login
-
-certisign-nuvemd --guardar-senha                   # senha da conta Certisign (vai pro chaveiro)
-certisign-nuvemd --guardar-pin                      # PIN do certificado (vai pro chaveiro)
-
-certisign-nuvemd --registrar                        # registra este PC e busca o certificado (confere)
-systemctl --user enable --now certisign-nuvemd      # sobe o serviço e deixa no boot
+gh repo clone atoslins/ecpf-nuvem-linux && cd ecpf-nuvem-linux && ./install.sh
 ```
 
-Teste rápido de assinatura (pede o e-Token numa janela):
+Precisa de: Rust (`cargo`), `nss` (certutil/pk12util/modutil) e `zenity` (ou `pinentry-gnome3`) —
+o instalador avisa o que faltar. Rodar de novo é seguro (pula o que já está feito).
+
+Teste rápido (pede o e-Token numa janela):
 
 ```bash
 certisign-nuvemd --assinar-teste
