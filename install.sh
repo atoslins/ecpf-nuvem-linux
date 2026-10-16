@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 # Instalador interativo do e-CPF A3 em nuvem (Certisign) no Linux.
 # Rode de um clone:   ./install.sh
-# Ou direto do curl:  curl -fsSL -H "Authorization: Bearer $(gh auth token)" \
-#                       -H "Accept: application/vnd.github.raw" \
-#                       https://api.github.com/repos/atoslins/ecpf-nuvem-linux/contents/install.sh | bash
+# Ou direto do curl:  curl -fsSL https://raw.githubusercontent.com/atoslins/ecpf-nuvem-linux/main/install.sh | bash
 set -euo pipefail
 
 REPO="atoslins/ecpf-nuvem-linux"
@@ -132,6 +130,6 @@ printf '\n%s\n' "${B}${G}  Tudo pronto.${Z}"
 cat <<FIM
   ${D}• Teste a assinatura:${Z}  certisign-nuvemd --assinar-teste
   ${D}• No Chrome:${Z}            chrome://settings/certificates  (token "Certisign nuvem")
-  ${D}• Trocar a conta/cert:${Z}  veja o LEIAME.md (seção "Trocar o certificado")
+  ${D}• Trocar a conta/cert:${Z}  veja o README.md (seção "Trocar o certificado")
 
 FIM
