@@ -1,3 +1,5 @@
+<img src="assets/banner.svg" alt="e-CPF A3 em nuvem no Linux: Certisign nativo no Linux, assina no Assinador Serpro e no PJeOffice e faz login por certificado no gov.br" width="100%">
+
 # e-CPF A3 em nuvem (Certisign) no Linux
 
 Use o e-CPF A3 em nuvem da Certisign nativamente no Linux. Com ele você assina documentos no Assinador Serpro e no PJeOffice e faz login por certificado digital em sites como o gov.br, usando o Chrome ou o Firefox. Não precisa de Windows nem de máquina virtual.

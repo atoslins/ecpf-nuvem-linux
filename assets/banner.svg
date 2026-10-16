@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 440" role="img" aria-label="e-CPF A3 em nuvem no Linux. Certisign nativo no Linux: assina no Assinador Serpro e no PJeOffice e faz login por certificado no gov.br.">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1016"/>
+      <stop offset="1" stop-color="#121a24"/>
+    </linearGradient>
+    <linearGradient id="grn" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2ea043"/>
+      <stop offset="1" stop-color="#3fe08a"/>
+    </linearGradient>
+    <style>
+      .t  { font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+      .mono { font-family: "SFMono-Regular", "JetBrains Mono", Consolas, "Liberation Mono", monospace; }
+    </style>
+  </defs>
+
+  <rect width="1280" height="440" fill="url(#bg)"/>
+  <rect width="1280" height="440" fill="none" stroke="#223041" stroke-width="2"/>
+
+  <!-- escudo com cadeado, à direita -->
+  <g transform="translate(1000 220)" opacity="0.95">
+    <circle r="150" fill="#0e1620"/>
+    <circle r="150" fill="none" stroke="#1e3a2c" stroke-width="2"/>
+    <circle r="178" fill="none" stroke="#17222e" stroke-width="2" stroke-dasharray="3 10"/>
+    <path d="M0 -92 L70 -62 V8 C70 60 38 92 0 108 C-38 92 -70 60 -70 8 V-62 Z"
+          fill="none" stroke="url(#grn)" stroke-width="6" stroke-linejoin="round"/>
+    <rect x="-30" y="-6" width="60" height="52" rx="8" fill="none" stroke="url(#grn)" stroke-width="6"/>
+    <path d="M-18 -6 V-24 a18 18 0 0 1 36 0 V-6" fill="none" stroke="url(#grn)" stroke-width="6"/>
+    <circle cx="0" cy="16" r="7" fill="#3fe08a"/>
+    <rect x="-3" y="18" width="6" height="16" rx="3" fill="#3fe08a"/>
+  </g>
+
+  <!-- texto -->
+  <text class="t" x="72" y="138" fill="#e7edf3" font-size="62" font-weight="700">e-CPF A3 em nuvem</text>
+  <text class="t" x="72" y="206" font-size="62" font-weight="700" fill="url(#grn)">no Linux, sem Windows</text>
+
+  <text class="t" x="74" y="252" fill="#9fb0c0" font-size="23">Certisign nativo no Linux. Assina no Assinador Serpro e no PJeOffice,</text>
+  <text class="t" x="74" y="283" fill="#9fb0c0" font-size="23">e faz login por certificado no gov.br, pelo Chrome ou Firefox.</text>
+
+  <!-- chips -->
+  <g class="t" font-size="18" fill="#cdd9e5">
+    <g transform="translate(74 312)">
+      <rect width="118" height="34" rx="17" fill="#15202c" stroke="#2a3a4a"/>
+      <text x="59" y="23" text-anchor="middle">Certisign</text>
+    </g>
+    <g transform="translate(202 312)">
+      <rect width="112" height="34" rx="17" fill="#15202c" stroke="#2a3a4a"/>
+      <text x="56" y="23" text-anchor="middle">PKCS#11</text>
+    </g>
+    <g transform="translate(324 312)">
+      <rect width="92" height="34" rx="17" fill="#15202c" stroke="#2a3a4a"/>
+      <text x="46" y="23" text-anchor="middle">gov.br</text>
+    </g>
+    <g transform="translate(426 312)">
+      <rect width="130" height="34" rx="17" fill="#15202c" stroke="#2a3a4a"/>
+      <text x="65" y="23" text-anchor="middle">ICP-Brasil</text>
+    </g>
+    <g transform="translate(566 312)">
+      <rect width="74" height="34" rx="17" fill="#15202c" stroke="#2a3a4a"/>
+      <text x="37" y="23" text-anchor="middle">Rust</text>
+    </g>
+  </g>
+
+  <!-- terminal com a instalação -->
+  <g transform="translate(74 366)">
+    <rect width="760" height="44" rx="10" fill="#0a1218" stroke="#223041"/>
+    <circle cx="22" cy="22" r="5" fill="#ff5f56"/>
+    <circle cx="40" cy="22" r="5" fill="#ffbd2e"/>
+    <circle cx="58" cy="22" r="5" fill="#27c93f"/>
+    <text class="mono" x="82" y="28" font-size="17" fill="#8aa0b4">curl -fsSL </text>
+    <text class="mono" x="176" y="28" font-size="17" fill="#cdd9e5">…/ecpf-nuvem-linux/main/install.sh</text>
+    <text class="mono" x="520" y="28" font-size="17" fill="#8aa0b4"> | bash</text>
+  </g>
+</svg>

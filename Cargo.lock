@@ -148,7 +148,7 @@ dependencies = [
 
 [[package]]
 name = "certisign-nuvem-core"
-version = "0.1.0"
+version = "1.0.0"
 dependencies = [
  "serde",
  "serde_json",
@@ -156,7 +156,7 @@ dependencies = [
 
 [[package]]
 name = "certisign-nuvemd"
-version = "0.1.0"
+version = "1.0.0"
 dependencies = [
  "anyhow",
  "base64 0.22.1",
@@ -178,7 +178,7 @@ dependencies = [
 
 [[package]]
 name = "certisign-p11"
-version = "0.1.0"
+version = "1.0.0"
 dependencies = [
  "base64 0.22.1",
  "certisign-nuvem-core",
